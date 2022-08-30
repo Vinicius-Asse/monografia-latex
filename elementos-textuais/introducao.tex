@@ -1,11 +1,23 @@
-\chapter{Introdução}\label{chp:INTRODUCAO}
+\chapter{Introdução}\label{chp:LABEL_INTRODUCAO}
 
-Falará um breve introdução ao trabalho, explicando brevemente o contexto, motivação e problema.
+
+Em tempos modernos, a manipulação de grandes quantidades de dados se tornou uma necessidade inquestionável para diversas áreas da sociedade. No contexto da computação gráfica, isso pode ser retratado pela alta fidelidade visual desejável em aplicações em tempo real.
+
+Com o poder de processamento gráfico moderno, já é possível gerar imagens computacionais que se assemelham da realidade. Em fevereiro de 2017, uma emissora de televisão aberta confundiu durante uma reportagem em rede nacional um video de jogabilidade do jogo de videogame \textit{Forza Motorsport 6}, lançado em 2015, com um video de testes para motorista do presidente dos Estados Unidos.
+
+Ainda que novas tecnologias tenham permitido que esse tipo de aplicação alcançasse uma qualidade gráfica satisfatória, dado sua linearidade na preparação dos dados de entrada, o processo atual responsável pela geração das imagens virtuais em tempo real não consegue se manter eficiente conforme a quantidade de dados cresce para magnitudes mais altas. Este problema afeta diretamente aplicações mais intensas, como é visto em experiencias em realidade virtual ou ferramentas CAD (computed aided design).
+
+Dado esse contexto, desenvolvedores e artistas trabalharam em novos meios de aprimorar a qualidade gráfica sem incrementar a malha das geometrias \textit{renderizadas}. Contudo, isso provocou um significativo aumento na complexidade do do fluxo, que então se tornou inflexível e imprevisível. \cite{TECR_MESH_SHADERS_DIRECTX_12}
+
+Por volta de 2015, pesquisadores começavam a esboçar a abstração de \textit{meshlets}, uma nova modelagem de dados capaz de otimizar o processo de renderização. A ideia de meshlets consiste em pré-processar a malha, aprimorando a reutilização de vértices, eliminando os índices duplicados e removendo lotes de geometria que não serão visíveis na imagem final. Embora esta fosse uma técnica eficaz para cenas estáticas, a rígida estrutura de entrada da esteira vigente restringia seus ganhos de performance em ambientes dinâmicos, como é visto em cenas com muito movimento ou em geração de geometria procedural.
+
+Visando mitigar as restrições da esteira de renderização atual, a fabricante de componentes de aceleração gráfica \textit{NVIDIA} introduziu em 2018 a sua arquitetura nomeada \textit{Turing} \cite{TECR_TURING_ARCHITETURE} o conceito de \textit{mesh shaders}: um novo módulo programável capaz de remodelar a esteira de renderização por completa. Além de simplificar o fluxo graças ao seu modelo de programação CPM (compute programing model), mesh shaders possibilitam a flexibilização da estrutura dos dados de entrada, permitindo assim um uso mais eficiente dos recursos da GPU.
 
 \section{Objetivo}
 
-Nesta subseção seria definido os objetivos do projeto final.
+Com o intuito de explorar as novas capacidades providas da esteira de renderização baseada em mesh shaders, foi desenvolvido para esse estudo uma ferramenta capaz de visualizar e comparar a execução do algoritmo de geração de geometria procedural \cite{REF_BOOK_PROCEDURAL_MODELING} denominado de \textit{marching cubes}. \cite{REF_ART_MARCHING_CUBES}. Este que pode se beneficiar das novas funcionalidades do novo módulo de programação por ser computacionalmente custoso porém completamente paralelizável.
 
-\section{Organização do Trabalho}
+\section{Organização do Documento}
 
-Nesta parte, será explicada como será a organização do trabalho.
+O Capitulo \ref{chp:LABEL_FUND_TEORICA} introduz os conceitos técnicos necessários para o entendimento do estudo. O Capítulo \ref{chp:LABEL_CASOS_DE_ESTUDOS} comentaremos sobre o algoritmo de marching cubes, implementado para este trabalho utilizando mesh shaders. No Capítulo \ref{chp:LABEL_EXPERIMENTOS}, apresentamos a ferramenta desenvolvida e os experimentos executados. 
+Por fim, no Capítulo \ref{chp:LABEL_CONCLUSAO}, concluiremos a nossa pesquisa com os resultados obtidos e trabalhos futuros.

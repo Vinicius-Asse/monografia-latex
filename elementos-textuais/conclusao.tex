@@ -1,11 +1,19 @@
-\chapter{Conclusão}\label{chp:CONCLUSAO}
+\chapter{Conclusão}\label{chp:LABEL_CONCLUSAO}
 
-Falará um breve resumo do capítulo.
+Neste capítulo concluiremos o trabalho e fornecemos sugestões de possíveis continuações do estudo para o futuro.
 
-\section{Considerações finais}
+\section{Conclusão}\label{sec:LABEL_CONCLUSAO_SEC_A}
 
-Fará um breve resumo do que foi feito e considerações sobre.
+Embora o conceito de mesh shaders seja um avanço disruptivo para a computação gráfica, seu uso por si só não garante ganhos de performance quando comparado ao pipeline atual. Fica em cargo dos desenvolvedores utilizar suas funcionalidades eficientemente afim de aprimorar seu desempenho.
 
-\section{Limitações e trabalhos futuros}
+Trazendo para o contexto de geração de malha procedural, mesh shaders aprimoram o fluxo de dados permitindo que grandes lotes de geometria sejam processadas e renderizadas de forma eficiente sem a necessidade de copiar os dados na memória principal. Embora haja a necessidade da alocação previa dos recursos, não observamos um uso significativo de memória dedicada de video durante a implementação de marching cubes em mesh shaders. A flexibilidade em seus atributos de entrada permitem que diversos algoritmos sejam implementados utilizando de forma ideal os recursos disponíveis pelos componentes de aceleração gráfica.
 
-Falará sobre as limitações do trabalho e possíveis extensões.
+\section{Trabalhos Futuros}\label{sec:LABEL_CONCLUSAO_SEC_B}
+
+Visando explorar todas os recursos providos por mesh shaders, propomos os seguintes trabalhos futuros:
+
+\begin{itemize}
+    \item Implementação de nível de detalhe dinamicos;
+    \item Utilização de task shaders para aplicar técnicas de \textit{culling} e \textit{instancing};
+    \item Virtualização de geometria com mesh shaders;
+\end{itemize}
