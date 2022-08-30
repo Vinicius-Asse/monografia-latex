@@ -1,19 +1,80 @@
-@article{braida2015transforming,
-  title={Transforming collaborative filtering into supervised learning},
-  author={Braida, Filipe and Mello, Carlos E and Pasinato, Marden B and Zimbr{\~a}o, Geraldo},
-  journal={Expert Systems with Applications},
-  volume={42},
-  number={10},
-  pages={4733--4742},
-  year={2015},
-  publisher={Elsevier}
+@BOOK{REF_BOOK_PROCEDURAL_MODELING,
+author={David S. Ebert, F. Kenton Musgrave, Darwyn Peachey, Ken Perlin, Steve Worley},
+title={Texturing and Modeling: A Procedural Approach},
+publisher={Morgan Kaufmann},
+year={2002},
+volume={3}
+}
+
+@article {REF_ART_MARCHING_CUBES,
+  author = {Lorensen, William E. and Cline, Harvey E.},
+  title = {Marching Cubes: A High Resolution 3D Surface Construction Algorithm},
+  year = {1987},
+  issue_date = {July 1987},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {21},
+  number = {4},
+  issn = {0097-8930},
+  url = {https://doi.org/10.1145/37402.37422},
+  doi = {10.1145/37402.37422},
+  abstract = {We present a new algorithm, called marching cubes, that creates triangle models of constant density surfaces from 3D medical data. Using a divide-and-conquer approach to generate inter-slice connectivity, we create a case table that defines triangle topology. The algorithm processes the 3D medical data in scan-line order and calculates triangle vertices using linear interpolation. We find the gradient of the original data, normalize it, and use it as a basis for shading the models. The detail in images produced from the generated surface models is the result of maintaining the inter-slice connectivity, surface data, and gradient information present in the original 3D data. Results from computed tomography (CT), magnetic resonance (MR), and single-photon emission computed tomography (SPECT) illustrate the quality and functionality of marching cubes. We also discuss improvements that decrease processing time and add solid modeling capabilities.},
+  journal = {SIGGRAPH Comput. Graph.},
+  month = {aug},
+  pages = {163–169},
+  numpages = {7}
+}
+
+@article {REF_ART_MARCHING_CUBES_REMESH,
+  author = {J. Y. S. Li and H. Zhang},
+  title = {Nonobtuse Remeshing and Mesh Decimation},
+  year = {2006},
+  publisher = {The Eurographics Association},
+  issn = {1727-8384},
+  url = {http://dx.doi.org/10.2312/SGP/SGP06/235-238},
+  abstract = {Quality meshing in 2D and 3D domains is an important problem in geometric modeling and scientific computing. We are concerned with triangle meshes having only nonobtuse angles. Specifically, we propose a solution for guaranteed nonobtuse remeshing and nonobtuse mesh decimation. Our strategy for the remeshing problem is to first convert an input mesh, using a modified Marching Cubes algorithm, into a rough approximate mesh that is guaranteed to be nonobtuse. We then apply iterative “deform-to-fit" via constrained optimization to obtain a high-quality approximation, where the search space is restricted to be the set of nonobtuse meshes having a fixed connectivity. With a detailed nonobtuse mesh in hand, we apply constrained optimization again, driven by a quadric-based error, to obtain a hierarchy of nonobtuse meshes via mesh decimation.},
+  journal = {Eurographics Symposium on Geometry Processing},
+  month = {june},
+  pages = {235–238},
+  numpages = {4}
+}
+
+@article {REF_ART_MARCHING_CUBES_TERRAIN_GENERATION,
+  author = {Gerrit Greeff},
+  title = {Interactive voxel terrain design using procedural techniques},
+  year = {2009},
+  month = {mar},
+  publisher = {Stellenbosch : University of Stellenbosch},
+  url = {http://hdl.handle.net/10019.1/2631},
+  abstract = {Super cially realistic worlds can easily be created using fractal landscapes. Such landscapes are limited in that real-world geological features such as caves and overhangs are impossible using a standard height eld representation. Interactive, realistic simulation of terrain evolution on such landscapes has proved elusive and does not generally provide direct control over the placement of landscape features. This thesis presents an interactive terrain design system, which enables the user to generate localised, speci c terrain features, as well as generalised global characteristics. A fully volumetric terrain representation is used to allow varied three dimensional terrain features. A hybrid rendering algorithm is employed to e ciently render the volumetric data set, while allowing interactive terrain deformation. Small terrain deformation is enabled using voxel carving, while larger terrain features is generated using an adoption of the Wires algorithm. A fractal river network generation technique is presented and adopted for voxel terrain. These tools provide the user with interactive feedback to allow for more dynamic terrain design.}
+}
+
+@techreport{TECR_TURING_ARCHITETURE,
+  author      = {Emmett Kilgariff, Henry Moreton, Nick Stam and Brandon Bell},
+  institution = {NVIDIA},
+  title       = {NVIDIA Turing Architecture In-Depth},
+  year        = {2018}
+}
+
+@techreport{TECR_MESH_SHADERS_DIRECTX_12,
+  author      = {Sarah Jobalia},
+  institution = {Microsoft},
+  title       = {Coming to DirectX 12— Mesh Shaders and Amplification Shaders: Reinventing the Geometry Pipeline  
 },
-@manual{abntex2classe,
-	Author = {Lauro C{\'e}sar Araujo},
-	Date-Added = {2013-01-09 10:37:38 +0000},
-	Date-Modified = {2015-04-27 22:42:47 +0000},
-	Organization = {Equipe abnTeX2},
-	Title = {A classe abntex2: Modelo can{\^o}nico de trabalhos acad{\^e}micos brasileiros compat{\'\i}vel com as normas ABNT NBR 14724:2011, ABNT NBR 6024:2012 e outras},
-	Url = {http://www.abntex.net.br/},
-	Year = {2015},
-	Bdsk-Url-1 = {http://www.abntex.net.br/}}
+  year        = {2019}
+}
+
+@techreport{TECR_DIRECTX_MESH_SHADERS,
+  author      = {Sarah Jobalia},
+  institution = {Microsoft},
+  title       = {Coming to DirectX 12— Mesh Shaders and Amplification Shaders: Reinventing the Geometry Pipeline },
+  year        = {2018}
+}
+
+@misc{WIKI_OPENGL_TESSELATION,
+   author = "OpenGL Wiki",
+   title = "Tessellation --- OpenGL Wiki{,} ",
+   year = "2020",
+   url = "\url{http://www.khronos.org/opengl/wiki_opengl/index.php?title=Tessellation&oldid=14698}",
+   note = "[Online; accessed 18-March-2022]"
+ }
